@@ -13,3 +13,6 @@ A library of programming functions mainly for real-time computer vision
 
 - Streamlit✅
 An open-source framework for DS and ML engineers to deliver interactive data apps
+
+OOP
+- when calling method, need to call the instance of Class
