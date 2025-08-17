@@ -94,4 +94,4 @@ image5_path = PoseImage("/Users/onofuka/Desktop/ballet arabesque hide-heel.jpg")
 image5_path.run_pose_detection_model()
 image5_path.extract_pose_landmarks()
 image5_path.save_to_json("ref_poses/right_arabesque/6.json")
-imag
+image5_path.draw_and_visualize("Arabesque 6")

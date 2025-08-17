@@ -5,5 +5,4 @@
 # TO DO
 - Building a Reference json image for ideal poses✅
 - Preprocess user image (OpenCV / PIL)✅
-- Compare to Reference with Numpy / Scihit-learn
-- Rule-based logic with Python (rule-based if statements)
+- Rule-based logic with Python (rule-based if statements)✅

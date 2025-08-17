@@ -51,9 +51,9 @@ class Similarity:
         self.user_pose = user_pose
         self.reference_pose = reference_pose
     
-    def compute_similarity(self, user_pose, reference_pose):
+    def compute_similarity(self):
         total_distance = 0
-        for u_lm, r_lm in zip(user_pose, reference_pose):
+        for u_lm, r_lm in zip(self.user_pose, self.reference_pose):
             xd = u_lm['x'] - r_lm['x']
             yd = u_lm['y'] - r_lm['y']
 
@@ -63,7 +63,7 @@ class Similarity:
 
             u_distance = math.sqrt(xd ** 2 + yd ** 2)
             total_distance += u_distance
-        avg_distance = total_distance / len(user_pose)
+        avg_distance = total_distance / len(self.user_pose)
         return avg_distance
 
 
@@ -84,7 +84,7 @@ class Feedback:
     
     def generate_feedback(self):
         if self.best_match_filename.endswith("1.json"):
-            return ["You are actually perfect!"]
+            return ["You are actually perfect! Keep going for the left side or attitude!"]
         elif self.best_match_filename.endswith("2.json"):
             return ["Your body is bending too foward! Try to make your body up! It's okay to lower your back leg!"]
         elif self.best_match_filename.endswith("3.json"):
